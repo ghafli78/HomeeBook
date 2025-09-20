@@ -11,22 +11,22 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Firebase packages
-  firebase_core: ^2.32.0
-  cloud_firestore: ^4.17.5
-  firebase_storage: ^11.7.7
-  firebase_auth: ^4.20.0
+  # Firebase packages (updated)
+  firebase_core: ^4.1.0
+  cloud_firestore: ^6.0.1
+  firebase_storage: ^13.0.1
+  firebase_auth: ^6.0.2
 
   # Image picker for user uploads
   image_picker: ^1.1.1
 
   # UI & Utils
-  cupertino_icons: ^1.0.6
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.2
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
