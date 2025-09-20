@@ -1,0 +1,27 @@
+workflows:
+  ios-release:
+    name: iOS Release Workflow
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      groups:
+        - apple_credentials   # مجموعة تحتوي API Key
+        - ios_credentials     # مجموعة تحتوي الشهادات
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - ios/Pods
+    scripts:
+      - name: Install dependencies
+        script: flutter pub get
+      - name: Build iOS release
+        script: flutter build ipa --release
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        apple_id: ghafli78@gmail.com       # إيميل حساب Apple Developer
+        bundle_identifier: com.home.ebook4260   # غيّرها للبندل ID تبعك
+        submit_to_testflight: true
